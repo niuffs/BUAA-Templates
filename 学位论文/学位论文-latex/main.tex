@@ -1,0 +1,241 @@
+%% %%=================================================================
+%% %% <UTF-8>
+%% %% 北航学位论文模板使用样例
+%% %% 请将以下文件与此LaTeX文件放在同一目录中.
+%% %%-----------
+%% %% buaa.cls                  : LaTeX宏模板文件
+%% %% bst/GBT7714-2005.bst      : 国标参考文献BibTeX样式文件2005(https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
+%% %% bst/GBT7714-2015.bst      : 国标参考文献BibTeX样式文件2015(https://github.com/zepinglee/gbt7714-bibtex-style)
+%% %% pic/logo-buaa.eps         : 论文封皮北航字样
+%% %% pic/head-doctor.eps       : 论文封皮学术博士学位论文标题(华文行楷字体替代解决方案)
+%% %% pic/head-prodoctor.eps    : 论文封皮专业博士学位论文标题(华文行楷字体替代解决方案)
+%% %% pic/head-master.eps       : 论文封皮学术硕士学位论文标题(华文行楷字体替代解决方案)
+%% %% pic/head-professional.eps : 论文封皮专业硕士学位论文标题(华文行楷字体替代解决方案)
+%% %% tex/*.tex                 : 本模板样例中的独立章节
+%% %%-----------
+%% %% 请统一使用UTF-8编码.
+%% %%=================================================================
+
+%=================================================================
+% buaa基于ctexbook模板
+% 论文样式参考自《研究生手册--二〇二〇年七月》
+%======================
+% 模板导入:
+% \documentclass[thesis,permission,printtype,ostype,<ctexbookoptions>]{buaa}
+%======================
+% 模板选项:
+%======================
+% I.论文类型(thesis)
+%--------------------
+% a.学术硕士论文（master）[缺省值]
+% b.专业硕士论文（professional）
+% c.学术博士论文（doctor）
+% d.专业博士论文（prodoctor）
+%--------------------
+% II.密级(permission)
+%--------------------
+% a.公开（public）[缺省值]
+% b.内部（privacy）
+% c.秘密（secret=secret3）
+% c.1.秘密3年（secret3）
+% c.2.秘密5年（secret5）
+% c.3.秘密10年（secret10）
+% c.4.秘密永久（secret*）
+% d.机密（classified=classified5）
+% d.1.机密3年（classified3）
+% d.2.机密5年（classified5）
+% d.3.机密10年（classified10）
+% d.4.机密永久（classified*）
+% e.绝密（topsecret=topsecret10）
+% e.1.绝密3年（topsecret3）
+% e.2.绝密5年（topsecret5）
+% e.3.绝密10年（topsecret10）
+% e.4.绝密永久（topsecret*）
+%--------------------
+% III.打印设置(printtype)
+%--------------------
+% a.单面打印（oneside）[缺省值]
+% b.双面打印（twoside）
+%--------------------
+% IV.系统类型(ostype)
+%--------------------
+% a.win（oneside）[缺省值]
+% b.linux (linux)
+% c.mac (mac)
+%--------------------
+% V.ctexbook设置选项(<ctexbookoptions>)
+%--------------------
+% ...
+%======================
+% 其他说明:
+% 1. Mac系统请使用mac选项，并使用XeLaTeX编译。
+% 2. 可加入额外ctexbook文档类的选项，其将会被传递给ctexbook。
+%    例如：\documentclass[fontset=founder]{buaa}
+% 3. CTeX在Linux下默认使用Fandol字体，为避免某些生僻字无法显示，在系统已安装方正
+%    字体的前提下可通过fontset=founder选项常用方正字体。
+%=================================================================
+
+% !TeX program = xelatex
+
+\documentclass[doctor,privacy,oneside,win]{buaa}
+
+%=================================================================
+% 开启/关闭引用编号颜色：参考文献，公式，图，表，算法 等……
+\refcolor{off}   % 开启: on[默认]; 关闭: off;
+% 摘要和正文从右侧页开始
+\beginright{off} % 开启: on[默认]; 关闭: off;
+% 空白页留字
+%\emptypagewords{[ -- This page is a preset empty page -- ]}
+
+%=================================================================
+% buaa模板已内嵌以下LaTeX工具包:
+%--------------------
+% ifthen, etoolbox, titletoc, remreset,
+% geometry, fancyhdr, setspace,
+% float, graphicx, subfigure, epstopdf,
+% array, enumitem,
+% booktabs, longtable, multirow, caption,
+% listings, algorithm2e, amsmath, amsthm,
+% hyperref, pifont, color, soul,
+% ---
+% For Win: times
+% For Lin: newtxtext, newtxmath
+% For Mac: times, fontspec
+%--------------------
+% 请在此处添加额外工具包>>
+
+
+%=================================================================
+% buaa模板已内嵌以下LaTeX宏:
+%--------------------
+% \highlight{text} % 黄色高亮
+%--------------------
+% 请在此处添加自定义宏>>
+
+
+%%=================================================================
+% 论文题目及副标题-{中文}{英文}
+\Title{北京航空航天大学\\学位论文模板}
+%\Subtitle{}
+
+% 学科大类,默认工学
+% \Branch{工学}
+
+% 院系,专业及研究方向
+\Department{人工智能研究院}
+\Major{控制科学与工程}
+\Feild{模式识别与智能系统}
+
+% 导师信息-{中文名}{英文名}{职称}
+\Tutor{导师姓名}{Tutor}{教授}
+\Cotutor{副导师}{Cotutor}{职称}
+
+% 学生姓名-{中文名}{英文名}
+\Author{学生姓名}{Student}
+% 学生学号
+\StudentID{ID123456}
+
+% 中图分类号
+\CLC{TP391.4}
+
+% 时间节点-{月}{日}{年}
+\DateEnroll{09}{01}{2015}
+\DateGraduate{03}{31}{2018}
+\DateSubmit{01}{10}{2018}
+\DateDefence{03}{01}{2018}
+
+%%=================================================================
+% 摘要-{中文}{英文}
+\Abstract{%
+  摘要是学位论文内容的简短陈述，应体现论文工作的核心思想。论文摘要应力求语言精炼准确。博士学位论文的中文摘要一般约800$\sim$1200字；硕士学位论文的中文摘要一般约500字。摘要内容应涉及本项科研工作的目的和意义、研究思想和方法、研究成果和结论。博士学位论文必须突出论文的创造性成果，硕士学位论文必须突出论文的新见解。
+
+  关键字是为用户查找文献，从文中选取出来揭示全文主体内容的一组词语或术语，应尽量采用词表中的规范词（参考相应的技术术语标准）。关键词一般3$\sim$5个，按词条的外延层次排列（外延大的排在前面）。关键词之间用逗号分开，最后一个关键词后不打标点符号。
+
+  为了国际交流的需要，论文必须有英文摘要。英文摘要的内容及关键词应与中文摘要及关键词一致，要符合英语语法，语句通顺，文字流畅。英文和汉语拼音一律为Times New Roman体，字号与中文摘要相同。
+  }{%
+  What were you doing 500 years ago? Oh, that's right nothing, because you didn't exist yet. In fact, several generations of your family had yet to leave their mark on the world, but one very special shark may already have been swimming in the chilly North Atlantic at that time, and the incredible animal is somehow still alive today.
+
+  Scientists studying Greenland sharks observed the particularly old specimen just recently, and after studying it they've determined that the creature is approximately 272 to 512 years old. That's an absolutely insane figure, and if its age lands towards the higher end, it makes the animal the oldest observed living vertebrate on the entire planet.
+
+  Greenland sharks are an incredible species in a number of ways, but most notable is its longevity. The sharks are well over 100 years old before even reaching sexual maturity, and regularly live for centuries. This particularly old specimen, along with 27 others, were analyzed using radiocarbon dating. The reading came back at around 392 years, but potential margin of error means the animal's true age is somewhere between 272 and 512.
+
+  The shark, which is a female, measures an impressive 18 feet long. That's pretty large, but it might not sound particularly large for an ocean-dwelling creature that lives hundreds of years. That is, until you consider that the Greenland shark only grows around one centimeter per year. With that in mind, 18 feet is actually downright massive.
+
+  As for how this particular shark species manages to live so incredibly long, scientists attribute a lot of its longevity to its sluggish metabolism, as well as its environment. The frigid waters where the sharks thrive is thought to increase overall lifespan in a variety of ways. Past research has shown that cold environments can help slow aging, and these centuries-old sharks are most certainly benefiting from their chilly surroundings.
+}
+% 关键字-{中文}{英文}
+\Keyword{%
+    北航，学位论文，博士，硕士，中文}{%
+    News, BGR, Shark
+}
+
+% 图标目录
+\Listfigtab{bi} % 启用: on[默认]; 双标题：bi; 关闭: off;
+
+% 缩写定义 按tabular环境或其他列表环境编写
+\Abbreviations{ \centering
+\begin{tabular}{cl}
+  $E$ & 能量 \\
+  $m$ & 质量 \\
+  $c$ & 光速 \\
+  $P$ & 概率 \\
+  $T$ & 时间 \\
+  $v$ & 速度 \\
+\end{tabular}
+}
+
+\begin{document}
+
+%%=================================================================
+% 标题级别
+%--------------------
+% \chapter{第一章}
+% \section{1.1 小节}
+% \subsection{1.1.1 条}
+% \subsubsection{1.1.1.1}
+% \paragraph{1.1.1.1.1}
+% \subparagraph{1.1.1.1.1.1}
+%--------------------
+%%=================================================================
+
+% 格式说明
+\input{Instruction}
+
+\chapter{绪论}
+绪论的内容应简要说明研究工作的目的、范围、相关邻域的前人工作和知识空白、理论基础、研究设想、研究方法和实验设计、预期结果和意义。应言简意赅，不要与摘要雷同，不要写成摘要的注释。一般教科书中的知识，在绪论中不要赘述。
+
+有关历史回顾和前人工作的综述分析，以及理论分析等，可以单独成章，用足够的文字叙述。博士学位论文绪论一般不少于0.8万字，硕士学位论文绪论一般不少于0.5万字。
+
+\chapter{正文}
+博士学位论文一般为6~10万字，硕士学位论文一般为3~5万字。
+
+% 总结
+\summary
+学位论文的结论单独作为一章，但不加章号。如果不可能导出应有的结论，也可以没有结论而进行必要的讨论。
+
+% 参考文献
+% 手册中参考文献标准似乎并没有严格按照国标GBT7714-2015执行
+\Bib{GBT7714-BUAA}{Refs}
+
+% 附录
+\input{Appendix}
+
+% 攻读学位期间成果
+\achievement
+对于博士学位论文，本条目名称用“攻读博士学位期间取得的研究成果”，一般包括：
+
+攻读博士学位期间取得的学术成果：攻读博士学位期间取得的学术成果：列出攻读博士期间发表（含录用）的与学位论文相关的学位论文、发表专利、著作、获奖项目等，书写格式与参考文献格式相同；
+
+攻读博士期间参与的主要科研项目：列出攻读博士学位期间参与的与学位论文相关的主要科研项目，包括项目名称，项目来源，研制时间，本人承担的主要工作。
+
+对于硕士学位论文，本条目名称用“攻读硕士学位期间取得的学术成果”，只列出攻读硕士学位期间发表（含录用）的与学位论文相关的学位论文、发表专利、著作、获奖项目等，书写格式与参考文献格式相同。
+
+% 致谢
+\acknowledgments
+致谢中主要感谢指导教师和在学术方面对论文的完成有直接贡献及重要帮助的团体和人士，以及感谢给予转载和引用权的资料、图片、文献、研究思想和设想的所有者。致谢中还可以感谢提供研究经费及实验装置的基金会或企业等单位和人士。致谢辞应谦虚诚恳，实事求是，切记浮夸与庸俗之词。
+
+% 作者简介
+\biography
+博士学位论文应该提供作者简介，主要包括：姓名、性别、出生年月日、民族、出生的；简要学历、工作经历（职务）；以及攻读博士学位期间获得的其他奖项（除攻读学位期间取得的研究成果之外）。
+
+\end{document}

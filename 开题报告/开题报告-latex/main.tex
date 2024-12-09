@@ -1,0 +1,61 @@
+\documentclass[doctor,proposal,color]{buaa}
+
+\begin{document}
+
+% Info
+\thesistilte{\textcolor{red}{请在此处写各位同学的论文题目}}
+\title{\buaaatthesistitle}
+\authorname{研究生姓名}
+\author{\buaaatauthorname}
+\tutor{导师姓名}
+\stuno{XXXX}
+\major{专业名称}
+\direction{研究方向}
+\ckeyword{姿态估计、动作分割、行为识别、动作质量评估}
+\ekeyword{Pose estimation, Action localization, Action recognition, Action quality assessment}
+
+\hypersetup{
+    bookmarksnumbered,
+    bookmarksopen,
+    pdftitle={\buaaatthesistitle},
+    pdfauthor={\buaaatauthorname},
+    pdfsubject={\buaaatuniversity \buaaatschool \buaaatdegree 研究生学位论文\buaaatdoctype},
+    pdfcreator={LaTeXed~By~BUAA},
+}
+
+% Title_page(封面)
+\pdfbookmark[0]{\buaaatthesistitle}{cover}
+\maketitle
+\linespread{1.5}
+\pagestyle{frontmatter}
+
+% Toc(目录)
+\newpage
+\phantomsection
+\pdfbookmark[section]{\contentname}{contents}
+\tableofcontents
+\newpage
+\phantomsection
+\pdfbookmark[section]{\figurecontentname}{lof}
+\listoffigures
+% 模板暂无表格
+%\newpage
+%\phantomsection
+%\pdfbookmark[section]{\tablecontentname}{lot}
+%\listoftables
+\newpage
+\pagestyle{mainmatter}
+
+% Main content
+\input{Section1}
+\input{Section2}
+\input{Section3}
+
+% References
+\clearpage
+\nocite{*}
+\phantomsection
+\addcontentsline{toc}{section}{\bibname}
+\bibliography{Refs}
+
+\end{document}
