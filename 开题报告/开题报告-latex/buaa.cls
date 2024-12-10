@@ -249,8 +249,7 @@
     bookmarksopen,
     pdftitle={\buaaatthesistitle},
     pdfauthor={\buaaatauthorname},
-    pdfsubject={\buaaatuniversity \buaaatschool \buaaatdegree 研究生学位论文\buaaatdoctype},
-    pdfcreator={LaTeXed~By~BUAA},
+    pdfsubject={\buaaatuniversity \buaaatschool \buaaatdegree 研究生学位论文\buaaatdoctype}
 }
 
 \RequirePackage{bookmark}
